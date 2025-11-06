@@ -46,7 +46,7 @@ class WallServiceTest {
     fun dontShouldThrow() {
         WallService.add(Post(text = "haha"))
         WallService.add(Post(text = "haha"))
-        WallService.createComment(1, Comment())
-        assertEquals("text", WallService.comments[0].text)
+        var text = WallService.createComment(1, Comment()).text
+        assertEquals("text", text)
     }
 }

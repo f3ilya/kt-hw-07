@@ -25,7 +25,7 @@ data class Post(
 
 object WallService {
     private var posts = emptyArray<Post>()
-    var comments = emptyArray<Comment>()
+    private var comments = emptyArray<Comment>()
     private var id = 0
 
     fun createComment(postId: Int, comment: Comment): Comment {
@@ -55,6 +55,7 @@ object WallService {
 
     fun clear() {
         posts = emptyArray()
+        comments = emptyArray()
         id = 0
     }
 }
